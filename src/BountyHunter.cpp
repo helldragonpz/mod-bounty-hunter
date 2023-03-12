@@ -339,10 +339,12 @@ public:
 
         if (uiSender == GOSSIP_SENDER_MAIN)
         {
+            std::string codeCopy(code);
             if (islower(code[0]))
             {
-                toupper(code[0]);
+                codeCopy[0] = toupper(codeCopy[0]);
             }
+
 
             if (passChecks(pPlayer, code))
             {
